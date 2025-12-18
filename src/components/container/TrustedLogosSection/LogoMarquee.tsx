@@ -11,7 +11,7 @@ export default function LogoMarquee({ logos }: LogoMarqueeProps) {
         <div className="h-32 md:h-50 py-10 flex w-max animate-marquee gap-16 will-change-transform group-hover:[animation-play-state:paused]">
           <ul className="flex items-center gap-16">
             {[...logos, ...logos].map((logo, index) => (
-              <li>
+              <li key={index}>
                 <img
                   key={`${logo.name}-${index}`}
                   src={logo.src}

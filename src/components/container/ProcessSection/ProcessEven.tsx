@@ -1,58 +1,42 @@
+import { useState } from "react";
 import * as siteData from "../../constants/siteData";
+import ButtonArrowDown from "../../ui/Button/ButtonArrowDown";
+import ButtonArrowUp from "../../ui/Button/ButtonArrowUp";
 type ProcessEvenProps = {
   item: siteData.ProcessStep;
   step: number;
   isLast?: boolean;
 };
 export default function ProcessEven({ item, step, isLast }: ProcessEvenProps) {
+  const [showContent, setShowContent] = useState(true);
+  const toggleProcess = () => {
+    setShowContent((prev) => !prev);
+  };
   return (
-    <div className="flex flex-row-reverse md:flex-row gap-3 md:gap-6">
+    <div
+      className="flex flex-row-reverse md:flex-row gap-3 md:gap-6"
+      key={step}
+    >
       <div
         className="our-process-card"
         id="our-process-card-1"
-        // onClick={() => toggleProcess(1)}
+        onClick={toggleProcess}
       >
         <div className="relative flex flex-col flex-1">
           <h3 className="text-base md:text-xl font-bold leading-7.5 md:leading-8.5 tracking-[-0.02em]">
             {item.title}
           </h3>
-          <p
-            id="our-process-content-1"
-            className="text-sm md:text-base font-medium leading-7 md:leading-7.5 text-[var(--neutral-400)]"
-          >
-            {item.subtitle}
-          </p>
+          {showContent && (
+            <p
+              id="our-process-content-1"
+              className="text-sm md:text-base font-medium leading-7 md:leading-7.5 text-[var(--neutral-400)]"
+            >
+              {item.subtitle}
+            </p>
+          )}
         </div>
         <div className="flex items-start justify-center">
-          <svg
-            id="button-arrow-up-1"
-            viewBox="0 0 14 8"
-            className="w-4.5 h-[9px] mt-[12px] stroke-[var(--neutral-25)] dark:stroke-[var(--neutral-25)]"
-          >
-            <path
-              d="M13 7L7 1L1 7"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-
-          <svg
-            id="button-down-up-1"
-            viewBox="0 0 14 8"
-            className="hidden w-4.5 h-[9px] mt-[12px] stroke-[var(--neutral-25)] dark:stroke-[var(--neutral-25)]"
-          >
-            <path
-              d="M1 1L7 7L13 1"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+          {showContent ? <ButtonArrowUp /> : <ButtonArrowDown />}
         </div>
       </div>
 
