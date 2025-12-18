@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Header from "./components/container/Header/Header";
 
 function App() {
   const toggleProcess = (step: number) => {
@@ -22,7 +23,7 @@ function App() {
 
   return (
     <>
-      <header className="w-full max-w-[1440px] fixed h-16 md:h-21 backdrop-blur-2xl flex justify-between items-center py-6 px-4 md:px-35 z-50">
+      {/* <header className="w-full max-w-[1440px] fixed h-16 md:h-21 backdrop-blur-2xl flex justify-between items-center py-6 px-4 md:px-35 z-50">
         <a
           href="#home"
           className="flex flex-row gap-[8.53px] md:gap-[9.6px] cursor-pointer"
@@ -34,7 +35,7 @@ function App() {
             alt="Your Logo"
           />
           <p className="menu-hover font-bold text-[21.33px] leading-8 md:text-2xl md:leading-9 text-[var(--neutral-1000)]">
-            Your Logo
+            Your Logos
           </p>
         </a>
 
@@ -94,9 +95,10 @@ function App() {
             alt=""
           />
         </div>
-      </header>
+      </header> */}
+      <Header />
 
-      <nav
+      {/* <nav
         aria-label="mobile"
         className="mobile-menu pointer-events-none h-screen w-screen md:hidden fixed inset-0 bg-[var(--neutral-0)] overflow-hidden z-40 pt-16 transition-opacity ease-in-out duration-600 opacity-0"
       >
@@ -136,7 +138,7 @@ function App() {
             Let's Talk
           </button>
         </div>
-      </nav>
+      </nav> */}
 
       <main className="relative z-0">
         <article id="home" className="flex flex-col md:flex-row">
