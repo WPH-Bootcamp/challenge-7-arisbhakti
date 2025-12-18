@@ -4,7 +4,7 @@ type BrandLogoProps = {
 
 export default function BrandLogo({ href = "#home" }: BrandLogoProps) {
   return (
-    <a href={href} className="flex flex-row gap-[8.53px] cursor-pointer">
+    <a href={href} className="flex flex-row gap-[9.6px] cursor-pointer">
       <img
         src="/images/main-logo.svg"
         className="md:w-[29.59px] md:h-[32.46px] w-[26.3px] h-[28.85px]"

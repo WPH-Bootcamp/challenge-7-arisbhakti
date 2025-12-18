@@ -9,7 +9,6 @@ export type MetricItem = {
 };
 
 export type ProcessStep = {
-  step: number;
   title: string;
   subtitle: string;
 };
@@ -38,32 +37,26 @@ export const METRICS: MetricItem[] = [
 
 export const PROCESS_STEPS: ProcessStep[] = [
   {
-    step: 1,
     title: "Discovery & Consultation",
     subtitle: "Understand Your Needs & Goals",
   },
   {
-    step: 2,
     title: "Planning & Strategy",
     subtitle: "Build a Clear, Scalable Roadmap",
   },
   {
-    step: 3,
     title: "Design & Prototyping",
     subtitle: "Craft UX That Converts",
   },
   {
-    step: 4,
     title: "Development & Implementation",
     subtitle: "Deliver With Speed & Precision",
   },
   {
-    step: 5,
     title: "Testing & Optimization",
     subtitle: "Ensure Quality at Every Step",
   },
   {
-    step: 6,
     title: "Launch & Growth",
     subtitle: "Scale, Measure & Improve Continuously",
   },
@@ -99,4 +92,20 @@ export const FAQ_ITEMS: FaqItem[] = [
     question: "Can I start with a small project first?",
     answer: "Absolutely. We often begin with MVPs or pilot projects.",
   },
+];
+export type TrustedLogo = {
+  name: string;
+  src: string;
+};
+
+export const TRUSTED_LOGOS: TrustedLogo[] = [
+  { name: "Adobe", src: "/images/company-logo/adobe.svg" },
+  { name: "Airbnb", src: "/images/company-logo/airbnb.svg" },
+  { name: "Databricks", src: "/images/company-logo/databricks.svg" },
+  { name: "Dropbox", src: "/images/company-logo/dropbox.svg" },
+  { name: "Netflix", src: "/images/company-logo/netflix.svg" },
+  { name: "PayPal", src: "/images/company-logo/paypal.svg" },
+  { name: "Postman", src: "/images/company-logo/postman.svg" },
+  { name: "Upwork", src: "/images/company-logo/upwork.svg" },
+  { name: "Zoom", src: "/images/company-logo/zoom.svg" },
 ];

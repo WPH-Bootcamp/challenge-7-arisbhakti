@@ -34,7 +34,9 @@ export default function Header() {
 
         <DesktopNav items={desktopItems} />
 
-        <ButtonPrimary className="hidden md:flex">Let's Talk</ButtonPrimary>
+        <ButtonPrimary className="hidden md:flex font-medium">
+          Let's Talk
+        </ButtonPrimary>
 
         <MobileMenuToggle
           open={isMobileMenuOpen}

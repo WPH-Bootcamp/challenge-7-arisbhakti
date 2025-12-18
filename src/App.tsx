@@ -1,5 +1,9 @@
 import { useEffect } from "react";
 import Header from "./components/container/Header/Header";
+import HeroSection from "./components/container/HeroSection";
+import TrustedLogosSection from "./components/container/TrustedLogosSection";
+import MetricsSection from "./components/container/MetricsSection";
+import ProcessSection from "./components/container/ProcessSection";
 
 function App() {
   const toggleProcess = (step: number) => {
@@ -23,125 +27,10 @@ function App() {
 
   return (
     <>
-      {/* <header className="w-full max-w-[1440px] fixed h-16 md:h-21 backdrop-blur-2xl flex justify-between items-center py-6 px-4 md:px-35 z-50">
-        <a
-          href="#home"
-          className="flex flex-row gap-[8.53px] md:gap-[9.6px] cursor-pointer"
-          id="home-button"
-        >
-          <img
-            src="/images/main-logo.svg"
-            className="md:w-[29.59px] md:h-[32.46px] w-[26.3px] h-[28.85px]"
-            alt="Your Logo"
-          />
-          <p className="menu-hover font-bold text-[21.33px] leading-8 md:text-2xl md:leading-9 text-[var(--neutral-1000)]">
-            Your Logos
-          </p>
-        </a>
-
-        <nav className="hidden md:flex">
-          <ul className="flex gap-3 items-center h-full">
-            <li>
-              <a href="#about" className="py-2 px-4 menu-hover">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#services" className="py-2 px-4 menu-hover">
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#projects" className="py-2 px-4 menu-hover">
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href="#testimonials" className="py-2 px-4 menu-hover">
-                Testimonials
-              </a>
-            </li>
-            <li>
-              <a href="#faq" className="py-2 px-4 menu-hover">
-                FAQ
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <button className="contactus-button hidden md:flex items-center justify-center w-[197px] h-11 p-2 gap-1 rounded-full bg-[#FF623E] shadow-[inset_4px_4px_4px_0_rgba(255,255,255,0.25)] text-white font-medium transition-all duration-300 hover:brightness-110 active:scale-95 cursor-pointer">
-          Let's Talk
-        </button>
-        <div className="button-menu md:hidden">
-          <img
-            src="./images/menu-white.svg"
-            className="w-6 h-6 hidden dark:block z-50"
-            alt=""
-          />
-          <img
-            src="./images/menu-black.svg"
-            className="w-6 h-6 block dark:hidden z-50"
-            alt=""
-          />
-        </div>
-        <div className="button-close md:hidden hidden">
-          <img
-            src="./images/x-close-black.svg"
-            className="w-6 h-6 hidden dark:block z-50"
-            alt=""
-          />
-          <img
-            src="./images/x-close-white.svg"
-            className="w-6 h-6 block dark:hidden z-50"
-            alt=""
-          />
-        </div>
-      </header> */}
       <Header />
 
-      {/* <nav
-        aria-label="mobile"
-        className="mobile-menu pointer-events-none h-screen w-screen md:hidden fixed inset-0 bg-[var(--neutral-0)] overflow-hidden z-40 pt-16 transition-opacity ease-in-out duration-600 opacity-0"
-      >
-        <div className="flex flex-col gap-3 px-4">
-          <a
-            id="about-button"
-            className="font-semibold text-sm leading-7 text-neutral-25 py-2"
-          >
-            About
-          </a>
-          <a
-            id="services-button"
-            className="font-semibold text-sm leading-7 text-neutral-25 py-2"
-          >
-            Services
-          </a>
-          <a
-            id="projects-button"
-            className="font-semibold text-sm leading-7 text-neutral-25 py-2"
-          >
-            Portofolio
-          </a>
-          <a
-            id="testimonials-button"
-            className="font-semibold text-sm leading-7 text-neutral-25 py-2"
-          >
-            Testimonials
-          </a>
-          <a
-            id="faq-button"
-            className="font-semibold text-sm leading-7 text-neutral-25 py-2"
-          >
-            FAQ
-          </a>
-
-          <button className="contactus-button w-full h-11 leading-7 p-2 gap-1 rounded-full font-bold bg-[var(--primary-200)] text-white shadow-[inset_4px_4px_4px_0_rgba(255,255,255,0.25)] transition-all duration-300 hover:brightness-110 active:scale-95 cursor-pointer">
-            Let's Talk
-          </button>
-        </div>
-      </nav> */}
-
       <main className="relative z-0">
-        <article id="home" className="flex flex-col md:flex-row">
+        {/* <article id="home" className="flex flex-col md:flex-row">
           <div className="pt-[125px] md:pt-[230px] px-4 md:px-0 md:pl-35 flex flex-col gap-10 md:w-[653px] h-auto z-10">
             <div className="flex flex-col gap-2 md:w-[653px]">
               <h1 className="font-bold text-4xl md:text-[56px] leading-11 md:leading-17 tracking-[-0.72px] md:tracking-[-0.02em] text-[var(--neutral-25)]">
@@ -176,8 +65,9 @@ function App() {
             />
             <div></div>
           </div>
-        </article>
-        <article id="about" className="flex flex-col mt-[43px] px-4 md:px-35">
+        </article> */}
+        <HeroSection></HeroSection>
+        {/* <article id="about" className="flex flex-col mt-[43px] px-4 md:px-35">
           <p className="font-bold text-center text-base md:text-2xl leading-7.5 md:leading-9 text-neutral-25">
             Trusted by Global Innovators & Leading Brands
           </p>
@@ -316,8 +206,9 @@ function App() {
               </ul>
             </div>
           </div>
-        </article>
-        <article className="flex flex-col text-[var(--neutral-25)] px-4 md:px-35 py-20 gap-6 md:gap-16">
+        </article> */}
+        <TrustedLogosSection></TrustedLogosSection>
+        {/* <article className="flex flex-col text-[var(--neutral-25)] px-4 md:px-35 py-20 gap-6 md:gap-16">
           <header className="flex flex-col gap-[11px]">
             <h2 className="text-center font-bold tracking-[-0.02em] text-[28px] leading-11 md:text-5xl md:leading-14.5">
               End-to-End IT Solutions That Drive Results
@@ -352,8 +243,9 @@ function App() {
               </span>
             </div>
           </div>
-        </article>
-        <article
+        </article> */}
+        <MetricsSection></MetricsSection>
+        {/* <article
           id="process"
           className="flex flex-col gap-6 md:gap-16 py-10 px-4 md:py-20 md:px-35"
         >
@@ -708,7 +600,8 @@ function App() {
               </div>
             </div>
           </div>
-        </article>
+        </article> */}
+        <ProcessSection></ProcessSection>
         <article
           id="services"
           className="flex flex-col gap-10 md:gap-16 py-10 px-4 md:py-20 md:px-35"
