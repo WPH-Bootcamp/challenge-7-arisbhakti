@@ -2,6 +2,9 @@ import { use, useEffect, useState } from "react";
 import { NAV_ITEMS } from "../../constants/siteData";
 import DesktopNav from "./DesktopNav";
 import MobileMenu from "./MobileMenu";
+import MobileMenuToggle from "../../ui/Button/MobileMenuToggle";
+import ButtonPrimary from "../../ui/Button/Button";
+import BrandLogo from "../../ui/Button/BrandLogo";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,61 +30,18 @@ export default function Header() {
   return (
     <>
       <header className="w-full max-w-[1440px] fixed h-16 md:h-21 backdrop-blur-2xl flex justify-between items-center py-6 px-4 md:px-35 z-50">
-        <a
-          href="#home"
-          className="flex flex-row gap-[8.53px] md:gap-[9.6px] cursor-pointer"
-          id="home-button"
-        >
-          <img
-            src="/images/main-logo.svg"
-            className="md:w-[29.59px] md:h-[32.46px] w-[26.3px] h-[28.85px]"
-            alt="Your Logo"
-          />
-          <p className="menu-hover font-bold text-[21.33px] leading-8 md:text-2xl md:leading-9 text-[var(--neutral-1000)]">
-            Your Logo
-          </p>
-        </a>
+        <BrandLogo></BrandLogo>
 
         <DesktopNav items={desktopItems} />
 
-        <button className="contactus-button hidden md:flex items-center justify-center w-[197px] h-11 p-2 gap-1 rounded-full bg-[#FF623E] shadow-[inset_4px_4px_4px_0_rgba(255,255,255,0.25)] text-white font-medium transition-all duration-300 hover:brightness-110 active:scale-95 cursor-pointer">
-          Let's Talk
-        </button>
+        <ButtonPrimary className="hidden md:flex">Let's Talk</ButtonPrimary>
 
-        <button
-          className="md:hidden z-50"
-          onClick={() => setIsMobileMenuOpen((v) => !v)}
-          aria-label="Toggle mobile menu"
-        >
-          {isMobileMenuOpen ? (
-            <div className="button-close md:hidden">
-              <img
-                src="./images/x-close-black.svg"
-                className="w-6 h-6 hidden dark:block z-50"
-                alt=""
-              />
-              <img
-                src="./images/x-close-white.svg"
-                className="w-6 h-6 block dark:hidden z-50"
-                alt=""
-              />
-            </div>
-          ) : (
-            <div className="button-menu md:hidden">
-              <img
-                src="./images/menu-white.svg"
-                className="w-6 h-6 hidden dark:block z-50"
-                alt=""
-              />
-              <img
-                src="./images/menu-black.svg"
-                className="w-6 h-6 block dark:hidden z-50"
-                alt=""
-              />
-            </div>
-          )}
-        </button>
+        <MobileMenuToggle
+          open={isMobileMenuOpen}
+          onToggle={() => setIsMobileMenuOpen((v) => !v)}
+        />
       </header>
+
       <MobileMenu
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
