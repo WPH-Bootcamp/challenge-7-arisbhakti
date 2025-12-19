@@ -5,6 +5,7 @@ import TrustedLogosSection from "./components/container/TrustedLogosSection";
 import MetricsSection from "./components/container/MetricsSection";
 import ProcessSection from "./components/container/ProcessSection";
 import SolutionSection from "./components/container/SolutionSection";
+import IndustrySection from "./components/container/IndustrySection";
 
 function App() {
   // useEffect(() => {
@@ -599,7 +600,7 @@ function App() {
           </div>
         </article> */}
         <ProcessSection></ProcessSection>
-        <article
+        {/* <article
           id="services"
           className="flex flex-col gap-10 md:gap-16 py-10 px-4 md:py-20 md:px-35"
         >
@@ -754,9 +755,9 @@ function App() {
               </article>
             </div>
           </div>
-        </article>
+        </article> */}
         <SolutionSection></SolutionSection>
-        <article className="flex flex-col gap-6 md:gap-16 px-4 py-10 md:px-35 md:py-20">
+        {/* <article className="flex flex-col gap-6 md:gap-16 px-4 py-10 md:px-35 md:py-20">
           <header className="flex flex-col gap-[11px] text-left">
             <h2 className="font-bold text-[32px] md:text-[40px] leading-10.5 md:leading-14 tracking-[-0.02em]">
               Built for Your Industry
@@ -828,7 +829,8 @@ function App() {
               </div>
             </div>
           </div>
-        </article>
+        </article> */}
+        <IndustrySection></IndustrySection>
         <section
           id="projects"
           className="flex flex-col gap-6 px-4 py-10 md:gap-16 md:py-20 md:px-35"
