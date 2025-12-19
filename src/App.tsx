@@ -7,6 +7,8 @@ import ProcessSection from "./components/container/ProcessSection";
 import SolutionSection from "./components/container/SolutionSection";
 import IndustrySection from "./components/container/IndustrySection";
 import ProjectSection from "./components/container/ProjectSection";
+import TestimonialSection from "./components/container/TestimonialSection";
+import FAQSection from "./components/container/FAQSection";
 
 function App() {
   // useEffect(() => {
@@ -894,7 +896,7 @@ function App() {
           </div>
         </section> */}
         <ProjectSection></ProjectSection>
-        <article
+        {/* <article
           id="testimonials"
           className="overflow-hidden relative md:w-full md:overflow-x-hidden flex flex-col py-10 gap-12 md:py-20 md:gap-20 text-center px-4 justify-center items-center"
         >
@@ -1086,9 +1088,9 @@ function App() {
           <div>
             <img src="./images/dark-pagination.svg" alt="" />
           </div>
-        </article>
-
-        <article
+        </article> */}
+        <TestimonialSection></TestimonialSection>
+        {/* <article
           id="faq"
           className="flex flex-col py-10 px-4 gap-6 md:py-20 md:px-30 md:gap-12"
         >
@@ -1333,7 +1335,8 @@ function App() {
               </button>
             </aside>
           </div>
-        </article>
+        </article> */}
+        <FAQSection></FAQSection>
         <article
           id="contactus"
           className="flex flex-col px-4 pt-10 pb-0 md:px-35 md:py-20 justify-center items-center"

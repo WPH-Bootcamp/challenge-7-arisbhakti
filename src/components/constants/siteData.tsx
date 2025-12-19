@@ -13,12 +13,6 @@ export type ProcessStep = {
   subtitle: string;
 };
 
-export type FaqItem = {
-  id: string; // misal: "faq-1"
-  question: string;
-  answer: string;
-};
-
 export const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
@@ -62,37 +56,6 @@ export const PROCESS_STEPS: ProcessStep[] = [
   },
 ];
 
-export const FAQ_ITEMS: FaqItem[] = [
-  {
-    id: "faq-1",
-    question: "What services do you offer?",
-    answer:
-      "We provide custom web/app development, cloud solutions, UX/UI design, and more.",
-  },
-  {
-    id: "faq-2",
-    question: "How do I know if this is right for my business?",
-    answer:
-      "Book a free consult — we’ll assess your goals and recommend the right approach.",
-  },
-  {
-    id: "faq-3",
-    question: "How much does a project cost?",
-    answer:
-      "Every project is different. Let’s talk about your needs to get a tailored estimate.",
-  },
-  {
-    id: "faq-4",
-    question: "How long does it take?",
-    answer:
-      "Depends on scope — but we always prioritize quality and deadlines.",
-  },
-  {
-    id: "faq-5",
-    question: "Can I start with a small project first?",
-    answer: "Absolutely. We often begin with MVPs or pilot projects.",
-  },
-];
 export type TrustedLogo = {
   name: string;
   src: string;
@@ -216,5 +179,44 @@ export const PROJECTS: ProjectItem[] = [
     category: "Landing Page",
     title: "Portofolio 3",
     image: "/images/portofolio/porto3.svg",
+  },
+];
+
+export type FaqItem = {
+  id: string;
+  question: string;
+  answer: string;
+};
+
+export const FAQS: FaqItem[] = [
+  {
+    id: "faq-1",
+    question: "What services do you offer?",
+    answer:
+      "We provide end-to-end digital solutions including web development, mobile app development, UI/UX design, cloud solutions, software development, cybersecurity, QA solutions, and IT consulting.",
+  },
+  {
+    id: "faq-2",
+    question: "How long does it take to complete a project?",
+    answer:
+      "Project timelines depend on scope and complexity. Smaller projects can take a few weeks, while larger, more complex systems may take several months. We always provide a clear timeline before starting.",
+  },
+  {
+    id: "faq-3",
+    question: "Do you work with startups or only large companies?",
+    answer:
+      "We work with startups, scale-ups, and enterprise clients. Our approach is flexible and tailored to match your business stage and goals.",
+  },
+  {
+    id: "faq-4",
+    question: "How do you ensure project quality?",
+    answer:
+      "We follow structured development processes, conduct rigorous testing, and maintain clear communication throughout the project lifecycle to ensure high-quality results.",
+  },
+  {
+    id: "faq-5",
+    question: "Can you support our product after launch?",
+    answer:
+      "Absolutely. We offer ongoing support, maintenance, and optimization services to ensure your product continues to perform and scale effectively after launch.",
   },
 ];
