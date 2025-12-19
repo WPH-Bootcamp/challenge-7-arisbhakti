@@ -6,6 +6,7 @@ import MetricsSection from "./components/container/MetricsSection";
 import ProcessSection from "./components/container/ProcessSection";
 import SolutionSection from "./components/container/SolutionSection";
 import IndustrySection from "./components/container/IndustrySection";
+import ProjectSection from "./components/container/ProjectSection";
 
 function App() {
   // useEffect(() => {
@@ -831,7 +832,7 @@ function App() {
           </div>
         </article> */}
         <IndustrySection></IndustrySection>
-        <section
+        {/* <section
           id="projects"
           className="flex flex-col gap-6 px-4 py-10 md:gap-16 md:py-20 md:px-35"
         >
@@ -891,7 +892,8 @@ function App() {
               </div>
             </article>
           </div>
-        </section>
+        </section> */}
+        <ProjectSection></ProjectSection>
         <article
           id="testimonials"
           className="overflow-hidden relative md:w-full md:overflow-x-hidden flex flex-col py-10 gap-12 md:py-20 md:gap-20 text-center px-4 justify-center items-center"

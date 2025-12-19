@@ -194,3 +194,27 @@ export const INDUSTRIES: IndustryItem[] = [
     image: "/images/industry/healthcare.svg",
   },
 ];
+
+export type ProjectItem = {
+  category: string;
+  title: string;
+  image: string;
+};
+
+export const PROJECTS: ProjectItem[] = [
+  {
+    category: "Landing Page",
+    title: "Portofolio 1",
+    image: "/images/portofolio/porto1.svg",
+  },
+  {
+    category: "Landing Page",
+    title: "Portofolio 2",
+    image: "/images/portofolio/porto2.svg",
+  },
+  {
+    category: "Landing Page",
+    title: "Portofolio 3",
+    image: "/images/portofolio/porto3.svg",
+  },
+];
