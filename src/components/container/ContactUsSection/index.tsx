@@ -1,10 +1,95 @@
+import { useState } from "react";
 import { SERVICE_OPTIONS } from "../../constants/siteData";
 import ButtonPrimary from "../../ui/Button/Button";
 import Checkbox from "../../ui/Input/Checkbox";
 import TextArea from "../../ui/Input/TextArea";
 import TextInput from "../../ui/Input/TextInput";
 
+type ContactFormData = {
+  name: string;
+  email: string;
+  message: string;
+  services: string[];
+};
+
 export default function ContactUsSection() {
+  const [formData, setFormData] = useState<ContactFormData>({
+    name: "",
+    email: "",
+    message: "",
+    services: [],
+  });
+  type FormErrors = Partial<Record<keyof ContactFormData, string>>;
+  const [errors, setErrors] = useState<FormErrors>({});
+  const errorClass =
+    "border-red-500 hover:border-red-500 focus:border-red-500 focus:border-[3px]";
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+
+    // 👇 HAPUS ERROR FIELD INI SAJA
+    if (errors[name as keyof ContactFormData]) {
+      setErrors((prev) => ({
+        ...prev,
+        [name]: undefined,
+      }));
+    }
+  };
+
+  const handleCheckboxChange = (value: string, checked: boolean) => {
+    setFormData((prev) => ({
+      ...prev,
+      services: checked
+        ? [...prev.services, value]
+        : prev.services.filter((item) => item !== value),
+    }));
+
+    // 👇 HAPUS ERROR SERVICES SAAT ADA INTERAKSI
+    if (errors.services) {
+      setErrors((prev) => ({
+        ...prev,
+        services: undefined,
+      }));
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const nextErrors = validate(formData);
+    setErrors(nextErrors);
+
+    if (Object.keys(nextErrors).length > 0) {
+      return; // stop submit
+    }
+
+    console.log("FORM DATA:", formData);
+  };
+
+  const validate = (data: ContactFormData): FormErrors => {
+    const next: FormErrors = {};
+
+    if (!data.name.trim()) next.name = "Name is required";
+    if (!data.email.trim()) next.email = "Email is required";
+    else if (!/^\S+@\S+\.\S+$/.test(data.email))
+      next.email = "Email is invalid";
+
+    if (!data.message.trim()) next.message = "Message is required";
+
+    // kalau kamu mau wajib pilih minimal 1 service:
+    if (data.services.length === 0)
+      next.services = "Select at least one service";
+
+    return next;
+  };
+
   return (
     <article
       id="contactus"
@@ -19,7 +104,7 @@ export default function ContactUsSection() {
             Tell us what you need, and we’ll get back to you soon.
           </p>
         </header>
-        <form action="" className="flex flex-col gap-10">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-10">
           <div className="flex flex-col gap-5">
             <div className="flex flex-col gap-1.5">
               <TextInput
@@ -29,7 +114,13 @@ export default function ContactUsSection() {
                 label="Name"
                 placeholder="Enter your name"
                 autoComplete="name"
+                value={formData.name}
+                onChange={handleChange}
+                className={errors.name ? errorClass : ""}
               />
+              {errors.name && (
+                <p className="text-red-500 text-sm leading-7">{errors.name}</p>
+              )}
 
               <TextInput
                 id="email"
@@ -38,20 +129,43 @@ export default function ContactUsSection() {
                 label="Email Address"
                 placeholder="Enter your email"
                 autoComplete="email"
+                value={formData.email}
+                onChange={handleChange}
+                className={errors.name ? errorClass : ""}
               />
+              {errors.email && (
+                <p className="text-red-500 text-sm leading-7">{errors.email}</p>
+              )}
 
               <TextArea
                 id="message"
                 name="message"
                 label="Message"
                 placeholder="Enter your message"
+                value={formData.message}
+                onChange={handleChange}
+                className={errors.name ? errorClass : ""}
               />
+              {errors.message && (
+                <p className="text-red-500 text-sm leading-7">
+                  {errors.message}
+                </p>
+              )}
             </div>
 
             <div className="flex flex-col gap-3.5">
-              <label className="font-bold text-sm leading-7 text-neutral-25">
+              {/* <label className="font-bold text-sm leading-7 text-neutral-25">
+                Services
+              </label> */}
+
+              <label
+                className={`font-bold text-sm leading-7 ${
+                  errors.services ? "text-red-500" : "text-neutral-25"
+                }`}
+              >
                 Services
               </label>
+
               <div className="flex flex-col md:flex-row md:gap-[37px] gap-4">
                 <div className="flex flex-col md:flex-row md:gap-[37px] gap-4">
                   {/* Column kiri */}
@@ -63,6 +177,9 @@ export default function ContactUsSection() {
                         name={service.name}
                         value={service.value}
                         label={service.label}
+                        onChange={(e) =>
+                          handleCheckboxChange(service.value, e.target.checked)
+                        }
                       />
                     ))}
                   </div>
@@ -76,11 +193,19 @@ export default function ContactUsSection() {
                         name={service.name}
                         value={service.value}
                         label={service.label}
+                        onChange={(e) =>
+                          handleCheckboxChange(service.value, e.target.checked)
+                        }
                       />
                     ))}
                   </div>
                 </div>
               </div>
+              {errors.services && (
+                <p className="text-red-500 text-sm leading-7">
+                  {errors.services}
+                </p>
+              )}
             </div>
           </div>
 
