@@ -6,7 +6,7 @@ export default function ProcessSection() {
   const processSteps: siteData.ProcessStep[] = siteData.PROCESS_STEPS;
 
   return (
-    <article
+    <section
       id="process"
       className="flex flex-col gap-6 md:gap-16 py-10 px-4 md:py-20 md:px-35"
     >
@@ -39,6 +39,6 @@ export default function ProcessSection() {
           </div>
         ))}
       </div>
-    </article>
+    </section>
   );
 }

@@ -109,3 +109,57 @@ export const TRUSTED_LOGOS: TrustedLogo[] = [
   { name: "Upwork", src: "/images/company-logo/upwork.svg" },
   { name: "Zoom", src: "/images/company-logo/zoom.svg" },
 ];
+
+export type SolutionItem = {
+  title: string;
+  description: string;
+  image: string;
+};
+
+export const SOLUTIONS: SolutionItem[] = [
+  {
+    title: "Web Development",
+    description: "Build fast, scalable, and SEO-friendly websites.",
+    image: "/images/solutions/web.svg",
+  },
+  {
+    title: "Mobile App Development",
+    description: "Native & cross-platform apps tailored to user needs.",
+    image: "/images/solutions/mobile.svg",
+  },
+  {
+    title: "UI/UX Design",
+    description: "Delight users with intuitive and beautiful interfaces.",
+    image: "/images/solutions/ui.svg",
+  },
+  {
+    title: "Cloud Solutions",
+    description: "Build fast, scalable, and SEO-friendly websites.",
+    image: "/images/solutions/cloud.svg",
+  },
+  {
+    title: "Software Development",
+    description: "Custom solutions built around your business logic.",
+    image: "/images/solutions/software.svg",
+  },
+  {
+    title: "IT Infrastructure",
+    description: "Scale your backend with reliable tech foundations.",
+    image: "/images/solutions/infrastructure.svg",
+  },
+  {
+    title: "Cybersecurity Services",
+    description: "Stay protected with enterprise-grade security.",
+    image: "/images/solutions/cybersecurity.svg",
+  },
+  {
+    title: "QA Solutions",
+    description: "Ensure performance with rigorous testing frameworks.",
+    image: "/images/solutions/qa.svg",
+  },
+  {
+    title: "IT Consulting & Support",
+    description: "Make smarter tech decisions with expert guidance.",
+    image: "/images/solutions/consulting.svg",
+  },
+];

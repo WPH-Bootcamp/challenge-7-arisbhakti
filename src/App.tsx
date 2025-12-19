@@ -1,15 +1,12 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import Header from "./components/container/Header/Header";
 import HeroSection from "./components/container/HeroSection";
 import TrustedLogosSection from "./components/container/TrustedLogosSection";
 import MetricsSection from "./components/container/MetricsSection";
 import ProcessSection from "./components/container/ProcessSection";
+import SolutionSection from "./components/container/SolutionSection";
 
 function App() {
-  const toggleProcess = (step: number) => {
-    console.log(`Toggling process step: ${step}`);
-  };
-
   // useEffect(() => {
   //   const media = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -758,6 +755,7 @@ function App() {
             </div>
           </div>
         </article>
+        <SolutionSection></SolutionSection>
         <article className="flex flex-col gap-6 md:gap-16 px-4 py-10 md:px-35 md:py-20">
           <header className="flex flex-col gap-[11px] text-left">
             <h2 className="font-bold text-[32px] md:text-[40px] leading-10.5 md:leading-14 tracking-[-0.02em]">
