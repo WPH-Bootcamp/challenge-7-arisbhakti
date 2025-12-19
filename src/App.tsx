@@ -9,22 +9,25 @@ import IndustrySection from "./components/container/IndustrySection";
 import ProjectSection from "./components/container/ProjectSection";
 import TestimonialSection from "./components/container/TestimonialSection";
 import FAQSection from "./components/container/FAQSection";
+import ContactUsSection from "./components/container/ContactUsSection";
+import FooterSection from "./components/container/FooterSection";
+import { useEffect } from "react";
 
 function App() {
-  // useEffect(() => {
-  //   const media = window.matchMedia("(prefers-color-scheme: dark)");
+  useEffect(() => {
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
 
-  //   const applyTheme = () => {
-  //     document.documentElement.classList.toggle("dark", media.matches);
-  //   };
+    const applyTheme = () => {
+      document.documentElement.classList.toggle("dark", media.matches);
+    };
 
-  //   applyTheme(); // apply saat pertama load
-  //   media.addEventListener("change", applyTheme);
+    applyTheme(); // apply saat pertama load
+    media.addEventListener("change", applyTheme);
 
-  //   return () => {
-  //     media.removeEventListener("change", applyTheme);
-  //   };
-  // }, []);
+    return () => {
+      media.removeEventListener("change", applyTheme);
+    };
+  }, []);
 
   return (
     <>
@@ -1337,7 +1340,7 @@ function App() {
           </div>
         </article> */}
         <FAQSection></FAQSection>
-        <article
+        {/* <article
           id="contactus"
           className="flex flex-col px-4 pt-10 pb-0 md:px-35 md:py-20 justify-center items-center"
         >
@@ -1518,8 +1521,9 @@ function App() {
               ></div>
             </form>
           </div>
-        </article>
-        <footer className="flex flex-col py-6 px-4 md:py-10 md:px-35">
+        </article> */}
+        <ContactUsSection></ContactUsSection>
+        {/* <footer className="flex flex-col py-6 px-4 md:py-10 md:px-35">
           <div className="flex flex-col bg-neutral-950 gap-6 px-5 py-5 rounded-3xl border-[1px] border-[var(--neutral-800)] md:gap-15 md:py-10 md:px-10">
             <header className="flex flex-col md:flex-row-reverse gap-6 md:justify-between items-start">
               <div className="flex flex-row gap-[8.53px] md:gap-[9.6px]">
@@ -1636,7 +1640,8 @@ function App() {
               </div>
             </div>
           </div>
-        </footer>
+        </footer> */}
+        <FooterSection></FooterSection>
       </main>
       <div
         id="modal-success"

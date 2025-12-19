@@ -220,3 +220,49 @@ export const FAQS: FaqItem[] = [
       "Absolutely. We offer ongoing support, maintenance, and optimization services to ensure your product continues to perform and scale effectively after launch.",
   },
 ];
+
+export type ServiceOption = {
+  id: string;
+  name: string;
+  value: string;
+  label: string;
+};
+
+export const SERVICE_OPTIONS: ServiceOption[] = [
+  {
+    id: "web",
+    name: "services",
+    value: "web",
+    label: "Web Development",
+  },
+  {
+    id: "mobile",
+    name: "services",
+    value: "mobile",
+    label: "Mobile App Development",
+  },
+  {
+    id: "ui",
+    name: "services",
+    value: "ui",
+    label: "UI/UX Design",
+  },
+  {
+    id: "cloud",
+    name: "services",
+    value: "cloud",
+    label: "Cloud Solutions",
+  },
+  {
+    id: "software",
+    name: "services",
+    value: "software",
+    label: "Software Development",
+  },
+  {
+    id: "other",
+    name: "services",
+    value: "other",
+    label: "Other",
+  },
+];

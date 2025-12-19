@@ -1,7 +1,5 @@
-import React from "react";
-
 //give type here
-const Input = (props) => {
+const Input = (props: any) => {
   return <input {...props} />;
 };
 

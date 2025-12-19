@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FAQS } from "../../constants/siteData";
-import { FaqToggleIcon } from "../../ui/Button/FaqToggleIcon";
 import FAQItem from "./FAQItem";
 import ConsultationCard from "./ConsultationCard";
 export default function FAQSection() {
