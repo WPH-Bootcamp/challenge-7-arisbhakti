@@ -16,7 +16,14 @@ export default function ConsultationCard() {
         alt=""
       />
 
-      <button className="flex gap-1 p-2 rounded-full bg-[var(--neutral-1000)] text-[var(--neutral-0)] justify-center items-center font-bold text-base leading-7.5 tracking-[-0.02em] h-11 md:h-12">
+      <button
+        onClick={() => {
+          document
+            .getElementById("contactus")
+            ?.scrollIntoView({ behavior: "smooth" });
+        }}
+        className="flex gap-1 p-2 rounded-full bg-[var(--neutral-1000)] text-[var(--neutral-0)] justify-center items-center font-bold text-base leading-7.5 tracking-[-0.02em] h-11 md:h-12 transition-all duration-300 hover:brightness-110 active:scale-95 cursor-pointer"
+      >
         Free Consultation
       </button>
     </aside>

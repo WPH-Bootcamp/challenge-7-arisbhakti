@@ -3,7 +3,7 @@ import { NAV_ITEMS } from "../../constants/siteData";
 import DesktopNav from "./DesktopNav";
 import MobileMenu from "./MobileMenu";
 import MobileMenuToggle from "../../ui/Button/MobileMenuToggle";
-import ButtonPrimary from "../../ui/Button/Button";
+import ButtonPrimary from "../../ui/Button/ButtonPrimary";
 import BrandLogo from "../../ui/Button/BrandLogo";
 
 export default function Header() {

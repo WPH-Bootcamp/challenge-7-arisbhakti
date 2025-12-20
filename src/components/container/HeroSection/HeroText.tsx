@@ -1,4 +1,4 @@
-import ButtonPrimary from "../../ui/Button/Button";
+import ButtonPrimary from "../../ui/Button/ButtonPrimary";
 
 export default function HeroText() {
   return (

@@ -1,5 +1,5 @@
 import type { NavItem } from "../../constants/siteData";
-import ButtonPrimary from "../../ui/Button/Button";
+import ButtonPrimary from "../../ui/Button/ButtonPrimary";
 
 type MobileMenuProps = {
   isOpen: boolean;

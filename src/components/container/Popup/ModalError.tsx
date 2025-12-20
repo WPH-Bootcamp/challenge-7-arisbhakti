@@ -1,5 +1,5 @@
 import { Dialog } from "@headlessui/react";
-import ButtonPrimary from "../../ui/Button/Button";
+import ButtonPrimary from "../../ui/Button/ButtonPrimary";
 
 type ModalProps = {
   open: boolean;

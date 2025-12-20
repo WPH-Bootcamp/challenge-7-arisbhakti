@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { SERVICE_OPTIONS } from "../../constants/siteData";
-import ButtonPrimary from "../../ui/Button/Button";
+import ButtonPrimary from "../../ui/Button/ButtonPrimary";
 import Checkbox from "../../ui/Input/Checkbox";
 import TextArea from "../../ui/Input/TextArea";
 import TextInput from "../../ui/Input/TextInput";
