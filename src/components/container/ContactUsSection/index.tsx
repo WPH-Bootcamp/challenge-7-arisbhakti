@@ -19,10 +19,10 @@ export default function ContactUsSection() {
   const [openModalSuccess, setOpenModalSuccess] = useState(false);
 
   const [formData, setFormData] = useState<ContactFormData>({
-    name: "aris",
-    email: "aris@a.com",
-    message: "test message",
-    services: ["web"],
+    name: "",
+    email: "",
+    message: "",
+    services: [""],
   });
   type FormErrors = Partial<Record<keyof ContactFormData, string>>;
   const [errors, setErrors] = useState<FormErrors>({});
@@ -78,12 +78,12 @@ export default function ContactUsSection() {
     console.log("FORM DATA:", formData);
 
     // Reset form
-    // setFormData({
-    //   name: "",
-    //   email: "",
-    //   message: "",
-    //   services: [],
-    // });
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+      services: [],
+    });
     setOpenModalError(true);
   };
 
