@@ -30,7 +30,7 @@ export default function Header() {
   return (
     <>
       <header className="w-full max-w-[1440px] fixed h-16 md:h-21 backdrop-blur-2xl flex justify-between items-center py-6 px-4 md:px-35 z-50">
-        <BrandLogo></BrandLogo>
+        <BrandLogo onClose={() => setIsMobileMenuOpen(false)}></BrandLogo>
 
         <DesktopNav items={desktopItems} />
 

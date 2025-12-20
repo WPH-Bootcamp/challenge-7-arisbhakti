@@ -1,4 +1,5 @@
 import type { NavItem } from "../../constants/siteData";
+import ButtonPrimary from "../../ui/Button/Button";
 
 type MobileMenuProps = {
   isOpen: boolean;
@@ -25,23 +26,30 @@ export default function MobileMenu({
   `}
     >
       <div className="flex flex-col gap-3 px-4">
-        {items.map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            className="font-semibold text-sm leading-7 text-neutral-25 py-2"
-            onClick={onClose}
-          >
-            {item.label}
-          </a>
-        ))}
+        {items
+          .filter((i) => i.href !== "#home")
+          .map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="font-semibold text-sm leading-7 text-neutral-25 py-2"
+              onClick={onClose}
+            >
+              {item.label}
+            </a>
+          ))}
 
-        <button
-          onClick={onClose}
-          className="contactus-button w-full h-11 leading-7 p-2 gap-1 rounded-full font-bold bg-[var(--primary-200)] text-white shadow-[inset_4px_4px_4px_0_rgba(255,255,255,0.25)] transition-all duration-300 hover:brightness-110 active:scale-95 cursor-pointer"
+        <ButtonPrimary
+          className="contactus-button w-full h-11 leading-7 font-bold bg-[var(--primary-200)]"
+          onClick={() => {
+            onClose();
+            document
+              .getElementById("contactus")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
         >
           Let's Talk
-        </button>
+        </ButtonPrimary>
       </div>
     </nav>
   );
