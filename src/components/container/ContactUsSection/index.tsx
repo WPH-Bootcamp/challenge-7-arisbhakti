@@ -22,7 +22,7 @@ export default function ContactUsSection() {
     name: "",
     email: "",
     message: "",
-    services: [""],
+    services: [],
   });
   type FormErrors = Partial<Record<keyof ContactFormData, string>>;
   const [errors, setErrors] = useState<FormErrors>({});
@@ -168,10 +168,6 @@ export default function ContactUsSection() {
             </div>
 
             <div className="flex flex-col gap-3.5">
-              {/* <label className="font-bold text-sm leading-7 text-neutral-25">
-                Services
-              </label> */}
-
               <label
                 className={`font-bold text-sm leading-7 ${
                   errors.services ? "text-red-500" : "text-neutral-25"
