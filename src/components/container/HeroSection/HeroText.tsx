@@ -15,8 +15,15 @@ export default function HeroText() {
         </p>
       </div>
 
-      <ButtonPrimary className="w-full md:w-50 h-12 text-base font-bold">
-        Let&apos;s Talk
+      <ButtonPrimary
+        className="w-full md:w-50 h-12 text-base font-bold"
+        onClick={() => {
+          document
+            .getElementById("contactus")
+            ?.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        Let's Talk
       </ButtonPrimary>
     </div>
   );

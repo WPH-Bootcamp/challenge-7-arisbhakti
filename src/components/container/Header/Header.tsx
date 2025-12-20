@@ -34,7 +34,14 @@ export default function Header() {
 
         <DesktopNav items={desktopItems} />
 
-        <ButtonPrimary className="hidden md:flex font-medium">
+        <ButtonPrimary
+          className="hidden md:flex font-medium"
+          onClick={() => {
+            document
+              .getElementById("contactus")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
           Let's Talk
         </ButtonPrimary>
 

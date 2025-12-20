@@ -1,17 +1,20 @@
+import BrandLogo from "../../ui/Button/BrandLogo";
+
 export default function Footer() {
   return (
     <footer className="flex flex-col py-6 px-4 md:py-10 md:px-35">
       <div className="flex flex-col bg-neutral-950 gap-6 px-5 py-5 rounded-3xl border-[1px] border-[var(--neutral-800)] md:gap-15 md:py-10 md:px-10">
         <header className="flex flex-col md:flex-row-reverse gap-6 md:justify-between items-start">
           <div className="flex flex-row gap-[8.53px] md:gap-[9.6px]">
-            <img
+            {/* <img
               src="./images/main-logo.svg"
               className="md:w-[29.59px] md:h-[32.46px] w-[26.3px] h-[28.85px]"
               alt=""
             />
             <p className="font-bold text-[21.9px] leading-[31.8px] md:text-2xl md:leading-9 text-[var(--neutral-1000)]">
               Your Logo
-            </p>
+            </p> */}
+            <BrandLogo></BrandLogo>
           </div>
           <h2 className="font-bold text-[28px] leading-9.5 tracking-[-0.02em] w-[281px] md:text-4xl md:leading-11 text-neutral-25">
             LET'S DISCUSS YOUR IDEAS

@@ -4,6 +4,8 @@ import ButtonPrimary from "../../ui/Button/Button";
 import Checkbox from "../../ui/Input/Checkbox";
 import TextArea from "../../ui/Input/TextArea";
 import TextInput from "../../ui/Input/TextInput";
+import ModalSuccess from "../Popup/ModalSuccess";
+import ModalError from "../Popup/ModalError";
 
 type ContactFormData = {
   name: string;
@@ -13,11 +15,14 @@ type ContactFormData = {
 };
 
 export default function ContactUsSection() {
+  const [openModalError, setOpenModalError] = useState(false);
+  const [openModalSuccess, setOpenModalSuccess] = useState(false);
+
   const [formData, setFormData] = useState<ContactFormData>({
-    name: "",
-    email: "",
-    message: "",
-    services: [],
+    name: "aris",
+    email: "aris@a.com",
+    message: "test message",
+    services: ["web"],
   });
   type FormErrors = Partial<Record<keyof ContactFormData, string>>;
   const [errors, setErrors] = useState<FormErrors>({});
@@ -71,6 +76,15 @@ export default function ContactUsSection() {
     }
 
     console.log("FORM DATA:", formData);
+
+    // Reset form
+    // setFormData({
+    //   name: "",
+    //   email: "",
+    //   message: "",
+    //   services: [],
+    // });
+    setOpenModalError(true);
   };
 
   const validate = (data: ContactFormData): FormErrors => {
@@ -177,6 +191,7 @@ export default function ContactUsSection() {
                         name={service.name}
                         value={service.value}
                         label={service.label}
+                        checked={formData.services.includes(service.value)}
                         onChange={(e) =>
                           handleCheckboxChange(service.value, e.target.checked)
                         }
@@ -193,6 +208,7 @@ export default function ContactUsSection() {
                         name={service.name}
                         value={service.value}
                         label={service.label}
+                        checked={formData.services.includes(service.value)}
                         onChange={(e) =>
                           handleCheckboxChange(service.value, e.target.checked)
                         }
@@ -224,6 +240,17 @@ export default function ContactUsSection() {
           ></div>
         </form>
       </div>
+      <ModalSuccess
+        open={openModalSuccess}
+        onClose={() => setOpenModalSuccess(false)}
+      ></ModalSuccess>
+      <ModalError
+        open={openModalError}
+        onClose={() => {
+          setOpenModalError(false);
+          setOpenModalSuccess(true);
+        }}
+      ></ModalError>
     </article>
   );
 }
