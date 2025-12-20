@@ -1,9 +1,8 @@
 type BrandLogoProps = {
-  href?: string;
   onClose?: () => void;
 };
 
-export default function BrandLogo({ href = "#home", onClose }: BrandLogoProps) {
+export default function BrandLogo({ onClose }: BrandLogoProps) {
   return (
     <button
       onClick={() => {

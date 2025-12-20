@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { NAV_ITEMS } from "../../constants/siteData";
 import DesktopNav from "./DesktopNav";
 import MobileMenu from "./MobileMenu";
