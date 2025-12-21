@@ -11,9 +11,12 @@ import TestimonialSection from "./components/container/TestimonialSection";
 import FAQSection from "./components/container/FAQSection";
 import ContactUsSection from "./components/container/ContactUsSection";
 import FooterSection from "./components/container/FooterSection";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import OpeningModal from "./components/container/Popup/OpeningModal";
 
 function App() {
+  const [openOpeningModal, setOpenOpeningModal] = useState(true);
+
   useEffect(() => {
     const media = window.matchMedia("(prefers-color-scheme: dark)");
     const applyTheme = () => {
@@ -29,31 +32,49 @@ function App() {
 
   return (
     <>
+      {/* Logo , Navigation , Button Let's Talk */}
       <Header />
 
       <main className="relative z-0">
-        <HeroSection></HeroSection>
+        {/*  Your Tech Partner for Smarter Growth  */}
+        <HeroSection />
 
-        <TrustedLogosSection></TrustedLogosSection>
+        {/* Trusted by Global Innovators & Leading Brands */}
+        <TrustedLogosSection />
 
-        <MetricsSection></MetricsSection>
+        {/* End-to-End IT Solutions That Drive Results */}
+        <MetricsSection />
 
-        <ProcessSection></ProcessSection>
+        {/* Our Process */}
+        <ProcessSection />
 
-        <SolutionSection></SolutionSection>
+        {/* Smart IT Solutions That Grow With You */}
+        <SolutionSection />
 
-        <IndustrySection></IndustrySection>
+        {/* Built for Your Industry */}
+        <IndustrySection />
 
-        <ProjectSection></ProjectSection>
+        {/* From Vision to Launch! Projects We’re Proud Of */}
+        <ProjectSection />
 
-        <TestimonialSection></TestimonialSection>
+        {/* What Partners Say About Working With Us */}
+        <TestimonialSection />
 
-        <FAQSection></FAQSection>
+        {/* Need Help? Start Here. */}
+        <FAQSection />
 
-        <ContactUsSection></ContactUsSection>
+        {/* Ready to Start? Let’s Talk. */}
+        <ContactUsSection />
 
-        <FooterSection></FooterSection>
+        {/* LET'S DISCUSS YOUR IDEAS */}
+        <FooterSection />
       </main>
+
+      {/* Info Modal (only shown in the beginning of application) */}
+      <OpeningModal
+        open={openOpeningModal}
+        onClose={() => setOpenOpeningModal(false)}
+      />
     </>
   );
 }
