@@ -17,10 +17,6 @@ export default function Header() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  useEffect(() => {
-    console.log("Mobile menu is now", isMobileMenuOpen ? "open" : "closed");
-  }, [isMobileMenuOpen]);
-
   const desktopItems = NAV_ITEMS.filter((i) => i.href !== "#home");
   const mobileItems = NAV_ITEMS;
 
