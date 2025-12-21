@@ -22,10 +22,8 @@ export default function Header() {
     console.log("Mobile menu is now", isMobileMenuOpen ? "open" : "closed");
   }, [isMobileMenuOpen]);
 
-  // Kamu sebelumnya gak menampilkan "Home" di nav desktop, tapi ada di mobile menu.
-  // Di App.tsx: desktop nav mulai dari About (tanpa Home). :contentReference[oaicite:1]{index=1}
   const desktopItems = NAV_ITEMS.filter((i) => i.href !== "#home");
-  const mobileItems = NAV_ITEMS; // mobile boleh include Home
+  const mobileItems = NAV_ITEMS;
 
   return (
     <>

@@ -10,6 +10,7 @@ export default function ProcessSection() {
       id="process"
       className="flex flex-col gap-6 md:gap-16 py-10 px-4 md:py-20 md:px-35"
     >
+      {/* Header */}
       <header className="flex flex-col gap-[11px]">
         <h2 className="text-center font-bold tracking-[-0.02em] text-[28px] leading-14 md:text-[40px] md:leading-9.5">
           Our Process
@@ -20,6 +21,8 @@ export default function ProcessSection() {
           business.
         </p>
       </header>
+
+      {/* Loop the data */}
       <div className="flex flex-col gap-4">
         {processSteps.map((item, index) => (
           <div key={index}>

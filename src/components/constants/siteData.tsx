@@ -13,6 +13,41 @@ export type ProcessStep = {
   subtitle: string;
 };
 
+export type TrustedLogo = {
+  name: string;
+  src: string;
+};
+export type SolutionItem = {
+  title: string;
+  description: string;
+  image: string;
+};
+
+export type IndustryItem = {
+  key: string;
+  label: string;
+  description: string;
+  image: string;
+};
+
+export type ProjectItem = {
+  category: string;
+  title: string;
+  image: string;
+};
+export type FaqItem = {
+  id: string;
+  question: string;
+  answer: string;
+};
+export type ServiceOption = {
+  id: string;
+  name: string;
+  value: string;
+  label: string;
+};
+
+// ======= Navigation
 export const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
@@ -22,6 +57,20 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "FAQ", href: "#faq" },
 ];
 
+// ======= Trusted by Global Innovators & Leading Brands
+export const TRUSTED_LOGOS: TrustedLogo[] = [
+  { name: "Adobe", src: "/images/company-logo/adobe.svg" },
+  { name: "Airbnb", src: "/images/company-logo/airbnb.svg" },
+  { name: "Databricks", src: "/images/company-logo/databricks.svg" },
+  { name: "Dropbox", src: "/images/company-logo/dropbox.svg" },
+  { name: "Netflix", src: "/images/company-logo/netflix.svg" },
+  { name: "PayPal", src: "/images/company-logo/paypal.svg" },
+  { name: "Postman", src: "/images/company-logo/postman.svg" },
+  { name: "Upwork", src: "/images/company-logo/upwork.svg" },
+  { name: "Zoom", src: "/images/company-logo/zoom.svg" },
+];
+
+// ======= End-to-End IT Solutions That Drive Results
 export const METRICS: MetricItem[] = [
   { value: "50+", label: "Projects Delivered" },
   { value: "5+", label: "Years of Experience" },
@@ -29,6 +78,7 @@ export const METRICS: MetricItem[] = [
   { value: "100%", label: "Client Satisfaction Rate" },
 ];
 
+// ======= Our Process
 export const PROCESS_STEPS: ProcessStep[] = [
   {
     title: "Discovery & Consultation",
@@ -56,29 +106,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
   },
 ];
 
-export type TrustedLogo = {
-  name: string;
-  src: string;
-};
-
-export const TRUSTED_LOGOS: TrustedLogo[] = [
-  { name: "Adobe", src: "/images/company-logo/adobe.svg" },
-  { name: "Airbnb", src: "/images/company-logo/airbnb.svg" },
-  { name: "Databricks", src: "/images/company-logo/databricks.svg" },
-  { name: "Dropbox", src: "/images/company-logo/dropbox.svg" },
-  { name: "Netflix", src: "/images/company-logo/netflix.svg" },
-  { name: "PayPal", src: "/images/company-logo/paypal.svg" },
-  { name: "Postman", src: "/images/company-logo/postman.svg" },
-  { name: "Upwork", src: "/images/company-logo/upwork.svg" },
-  { name: "Zoom", src: "/images/company-logo/zoom.svg" },
-];
-
-export type SolutionItem = {
-  title: string;
-  description: string;
-  image: string;
-};
-
+// ======= Smart IT Solutions That Grow With You
 export const SOLUTIONS: SolutionItem[] = [
   {
     title: "Web Development",
@@ -127,13 +155,7 @@ export const SOLUTIONS: SolutionItem[] = [
   },
 ];
 
-export type IndustryItem = {
-  key: "fintech" | "ecommerce" | "healthcare";
-  label: string;
-  description: string;
-  image: string;
-};
-
+// ======= Built for Your Industry
 export const INDUSTRIES: IndustryItem[] = [
   {
     key: "fintech",
@@ -158,12 +180,7 @@ export const INDUSTRIES: IndustryItem[] = [
   },
 ];
 
-export type ProjectItem = {
-  category: string;
-  title: string;
-  image: string;
-};
-
+// ======= From Vision to Launch! Projects We’re Proud Of
 export const PROJECTS: ProjectItem[] = [
   {
     category: "Landing Page",
@@ -182,12 +199,35 @@ export const PROJECTS: ProjectItem[] = [
   },
 ];
 
-export type FaqItem = {
-  id: string;
-  question: string;
-  answer: string;
-};
+// ======= What Partners Say About Working With Us
+const TESTIMONIALS = [
+  {
+    id: "john",
+    avatar: "/images/partners/john.svg",
+    name: "John Lee",
+    role: "Creative Director at Innovate Corp",
+    quote:
+      "“Working with this team was a game-changer for our project. They understood our vision and turned it into reality efficiently and effectively.”",
+  },
+  {
+    id: "sarah",
+    avatar: "/images/partners/sarah.svg",
+    name: "Sarah Tan",
+    role: "Product Manager at Finovate",
+    quote:
+      "“The team delivered exactly what we needed — on time and with outstanding quality. Their attention to detail and communication were top-notch.”",
+  },
+  {
+    id: "emily",
+    avatar: "/images/partners/emily.svg",
+    name: "Emily Chen",
+    role: "Marketing Head at Tech Solutions",
+    quote:
+      "“The collaboration was seamless, and the results surpassed our expectations. Their expertise transformed our ideas into a successful product.”",
+  },
+];
 
+// ======= Need Help? Start Here.
 export const FAQS: FaqItem[] = [
   {
     id: "faq-1",
@@ -221,13 +261,7 @@ export const FAQS: FaqItem[] = [
   },
 ];
 
-export type ServiceOption = {
-  id: string;
-  name: string;
-  value: string;
-  label: string;
-};
-
+// ======= Ready to Start? Let’s Talk.
 export const SERVICE_OPTIONS: ServiceOption[] = [
   {
     id: "web",
@@ -267,30 +301,4 @@ export const SERVICE_OPTIONS: ServiceOption[] = [
   },
 ];
 
-const TESTIMONIALS = [
-  {
-    id: "john",
-    avatar: "/images/partners/john.svg",
-    name: "John Lee",
-    role: "Creative Director at Innovate Corp",
-    quote:
-      "“Working with this team was a game-changer for our project. They understood our vision and turned it into reality efficiently and effectively.”",
-  },
-  {
-    id: "sarah",
-    avatar: "/images/partners/sarah.svg",
-    name: "Sarah Tan",
-    role: "Product Manager at Finovate",
-    quote:
-      "“The team delivered exactly what we needed — on time and with outstanding quality. Their attention to detail and communication were top-notch.”",
-  },
-  {
-    id: "emily",
-    avatar: "/images/partners/emily.svg",
-    name: "Emily Chen",
-    role: "Marketing Head at Tech Solutions",
-    quote:
-      "“The collaboration was seamless, and the results surpassed our expectations. Their expertise transformed our ideas into a successful product.”",
-  },
-];
 export default TESTIMONIALS;

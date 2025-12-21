@@ -110,6 +110,7 @@ export default function ContactUsSection() {
       className="flex flex-col px-4 pt-10 pb-0 md:px-35 md:py-20 justify-center items-center"
     >
       <div className="flex flex-col gap-6 md:gap-12 md:w-180">
+        {/* HEADER */}
         <header className="flex flex-col gap-4">
           <h2 className="font-bold text-[28px] leading-9.5 tracking-[-0.02em] md:text-[40px] md:leading-14 text-neutral-25 text-center">
             Ready to Start? Let’s Talk.
@@ -118,6 +119,8 @@ export default function ContactUsSection() {
             Tell us what you need, and we’ll get back to you soon.
           </p>
         </header>
+
+        {/* CONTENT */}
         <form onSubmit={handleSubmit} className="flex flex-col gap-10">
           <div className="flex flex-col gap-5">
             <div className="flex flex-col gap-1.5">

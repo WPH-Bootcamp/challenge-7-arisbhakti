@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { INDUSTRIES } from "../../constants/siteData";
 
-/**
- * "fintech" | "ecommerce" | "healthcare"
- */
 type IndustryKey = (typeof INDUSTRIES)[number]["key"];
 
 export default function IndustrySection() {
@@ -15,6 +12,7 @@ export default function IndustrySection() {
 
   return (
     <section className="flex flex-col gap-6 md:gap-16 px-4 py-10 md:px-35 md:py-20">
+      {/* HEADER */}
       <header className="flex flex-col gap-[11px] text-left">
         <h2 className="font-bold text-[32px] md:text-[40px] leading-10.5 md:leading-14 tracking-[-0.02em]">
           Built for Your Industry
@@ -24,7 +22,10 @@ export default function IndustrySection() {
           more securely.
         </p>
       </header>
+
+      {/* CONTENT */}
       <div className="flex flex-col md:flex-row gap-6 md:gap-16">
+        {/* TITLE CONTENT */}
         <nav className="flex flex-col flex-1">
           <ul className="flex flex-col gap-3 md:gap-6 flex-1">
             {INDUSTRIES.map((industry) => {
@@ -48,7 +49,7 @@ export default function IndustrySection() {
           </ul>
         </nav>
 
-        {/* CONTENT */}
+        {/* DESCRIPTION CONTENT */}
         <div className="flex flex-col flex-4">
           {activeData && (
             <div className="flex flex-col gap-5">

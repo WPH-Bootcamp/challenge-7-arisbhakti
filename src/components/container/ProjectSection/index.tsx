@@ -7,6 +7,7 @@ export default function ProjectSection() {
       id="projects"
       className="flex flex-col gap-6 px-4 py-10 md:gap-16 md:py-20 md:px-35"
     >
+      {/* HEADER */}
       <header className="flex flex-col gap-[11px] justify-center text-center">
         <h2 className="font-bold text-[28px] leading-9.5 tracking-[-0.02em] md:text-[40px] md:leading-14">
           From Vision to Launch! Projects We’re Proud Of
@@ -17,6 +18,7 @@ export default function ProjectSection() {
         </p>
       </header>
 
+      {/* CONTENT */}
       <div className="grid grid-cols-1 md:grid-cols-3 md:flex-row gap-5">
         {PROJECTS.map((project) => (
           <ProjectCard key={project.title} {...project} />

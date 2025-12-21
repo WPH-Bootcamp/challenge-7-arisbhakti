@@ -7,6 +7,7 @@ export default function Solutions() {
       id="services"
       className="flex flex-col gap-10 md:gap-16 py-10 px-4 md:py-20 md:px-35"
     >
+      {/* Header */}
       <header className="flex flex-col gap-[11px] text-center">
         <h2 className="font-semibold text-[28px] leading-9.5 md:text-[40px] md:leading-14 tracking-[-0.02em]">
           Smart IT Solutions That Grow With You
@@ -15,6 +16,8 @@ export default function Solutions() {
           Tailored tech to boost efficiency, security, and results.
         </p>
       </header>
+
+      {/* Loop the data */}
       <div className="flex flex-col gap-10">
         {Array.from({ length: 3 }).map((_, rowIndex) => (
           <div

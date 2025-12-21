@@ -4,6 +4,7 @@ export default function Footer() {
   return (
     <footer className="flex flex-col py-6 px-4 md:py-10 md:px-35">
       <div className="flex flex-col bg-neutral-950 gap-6 px-5 py-5 rounded-3xl border-[1px] border-[var(--neutral-800)] md:gap-15 md:py-10 md:px-10">
+        {/* HEADER */}
         <header className="flex flex-col md:flex-row-reverse gap-6 md:justify-between items-start">
           <div className="flex flex-row gap-[8.53px] md:gap-[9.6px]">
             <BrandLogo></BrandLogo>
@@ -14,6 +15,7 @@ export default function Footer() {
         </header>
         <hr className="border-[var(--neutral-800)]" />
 
+        {/* CONTENT */}
         <div className="flex flex-col md:flex-row gap-6 md:justify-between md:items-center">
           <nav
             aria-label="footer"

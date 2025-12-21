@@ -46,6 +46,7 @@ export default function TestimonialSection() {
       id="testimonials"
       className="overflow-hidden relative md:w-full md:overflow-x-hidden flex flex-col py-10 gap-12 md:py-20 md:gap-20 text-center px-4 justify-center items-center"
     >
+      {/* HEADER */}
       <header className="flex flex-col gap-[11px]">
         <h2 className="font-bold text-[28px] leading-9.5 tracking-[-0.02em] text-neutral-25 md:text-[40px] md:leading-14 z-30">
           What Partners Say About Working With Us
@@ -54,6 +55,8 @@ export default function TestimonialSection() {
           Trusted voices. Real experiences. Proven results.
         </p>
       </header>
+
+      {/* DOTS PAGINATION */}
       <div className="flex md:hidden  gap-2 z-30">
         {renderSlides.map((t, i) => (
           <button
@@ -69,7 +72,8 @@ export default function TestimonialSection() {
           />
         ))}
       </div>
-      {/* <div className="md:w-fit md:relative w-full " ref={emblaRef}> */}
+
+      {/* CONTENT */}
       <div className="md:w-full md:relative w-full mx-auto" ref={emblaRef}>
         <div
           className="flex relative -ml-4 md:ml-0 md:gap-5"
@@ -132,7 +136,7 @@ export default function TestimonialSection() {
         </div>
       </div>
 
-      {/* DOTS (ganti image pagination jadi real dots) */}
+      {/* DOTS PAGINATION */}
       <div className="gap-2 z-30 hidden md:flex">
         {renderSlides.map((t, i) => (
           <button

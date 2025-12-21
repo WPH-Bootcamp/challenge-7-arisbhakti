@@ -1,6 +1,5 @@
-
-
 import { Dialog } from "@headlessui/react";
+import ButtonPrimary from "../../ui/Button/ButtonPrimary";
 
 type InfoModalProps = {
   open: boolean;
@@ -44,13 +43,13 @@ export default function OpeningModal({ open, onClose }: InfoModalProps) {
               <span className="text-neutral-400">(Batch Rendang – WPH 22)</span>
             </p>
 
-            <button
+            <ButtonPrimary
               type="button"
               onClick={onClose}
-              className="mt-2 h-11 rounded-full bg-[#FF623E] shadow-[inset_4px_4px_4px_0_rgba(255,255,255,0.25)] text-white font-bold transition-all duration-300 hover:brightness-110 active:scale-95"
+              className="mt-2 w-full"
             >
               Got it
-            </button>
+            </ButtonPrimary>
           </div>
         </div>
       </div>

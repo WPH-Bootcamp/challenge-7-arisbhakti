@@ -4,7 +4,10 @@ import HeroVisual from "./HeroVisual";
 export default function HeroSection() {
   return (
     <article id="home" className="flex flex-col md:flex-row">
+      {/* Header card (Title , subtitle , and button) */}
       <HeroText />
+
+      {/* Phone image */}
       <HeroVisual />
     </article>
   );
